@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Edit</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1>EDICION DE PRODUCTO</h1>
+    <form action="/<%= product.id %>?_method=put" method="POST" enctype="multipart/form-data" >
+        <input type="text" name="nameEditProduct" id="nameEditProduct" placeholder="Nombre"  value="<%= product.name %>">
+        <input type="text" name="colourEditProduct" id="colourEditProduct" placeholder="Color"  value="<%= product.colour %>">
+        <input type="text" name="descriptionEditProduct" id="descriptionEditProduct" placeholder="Descripcion Breve"  value="<%= product.description %>">
+        <input type="text" name="priceEditProduct" id="priceEditProduct" placeholder="Precio"  value="<%= product.price %>">
+        <input type="file" name="imageEditProduct" id="imageEditProduct">
+
+       <button type="submit">Enviar</button>
+    </form>
+    </div>
+</body>
+</html>
